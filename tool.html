@@ -13,7 +13,7 @@
         .container {
             max-width: 100%;
             padding: 20px;
-            margin-top: 50px;
+            margin-top: 20px;
         }
         .content {
             max-width: 600px;
@@ -28,8 +28,8 @@
             margin-top: 20px;
         }
         .music-logo {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto;
         }
         @media (max-width: 767px) {
@@ -38,6 +38,16 @@
             }
             .content {
                 padding: 15px;
+            }
+            .music-logo {
+                width: 80px;
+                height: 80px;
+            }
+            h4 {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -48,6 +58,7 @@
             <div class="text-center">
                 <img src="https://png.pngtree.com/element_our/sm/20180415/sm_5ad31d9b53530.png" alt="Music Logo" class="music-logo">
             </div>
+            <h4 class="text-center">Song Tag Sheet Maker is a free tool. You can create song detail sheets using this free tool. ADS FREE</h4>
             <h2 class="text-center">Song Tag Sheet Maker</h2>
             <form id="songForm">
                 <div class="mb-3">
@@ -83,6 +94,8 @@
 
             <table class="table table-bordered mt-4" id="show">
                 <thead class="table-dark">
+                   
+                </thead>
                 <tbody></tbody>
             </table>
         </div>
@@ -99,6 +112,8 @@
             let br = document.getElementById("br").value;
             let rl = document.getElementById("rl").value;
             let year = document.getElementById("year").value;
+            
+          
             
             document.getElementById("copyText").value = `Title: ${title}\nArtist: ${artist}\nGenre: ${genre}\nBitrate: ${br}\nRecord Label: ${rl}\nRelease Date: ${year}`;
         }
@@ -121,5 +136,6 @@
             document.getElementById("copyText").value = "";
         }
     </script>
+
 </body>
 </html>
